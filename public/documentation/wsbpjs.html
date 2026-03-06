@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dokumentasi Antrean RS MJKN</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet"
+        href="https://dvlp.bpjs-kesehatan.go.id:8888/trust-mark/libs/jquery/bootstrap/dist/css/bootstrap.min.css"
+        type="text/css">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="" row">
+        <div class="col-lg-12">
+            <div class="panel-group" id="accordion">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed"
+                                aria-expanded="false">Referensi Poli</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/ref/poli</h3>
+                            <p>Fungsi : Melihat referensi poli yang ada pada Aplikasi HFIS </p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                            <div id="collapse1">
+                                <pre>                                <span class="cp">
+                                
+{
+    "metadata": {
+        "code": 1,
+        "message": "OK"
+    },
+    "response": {
+        "list": [
+            {
+                "nmpoli": "AKUPUNTUR MEDIK",
+                "nmsubspesialis": "AKUPUNTUR MEDIK",
+                "kdsubspesialis": "AKP",
+                "kdpoli": "AKP"
+            },
+            {
+                "nmpoli": "ANAK",
+                "nmsubspesialis": "ANAK ALERGI IMUNOLOGI",
+                "kdsubspesialis": "027",
+                "kdpoli": "ANA"
+            }
+        ]
+    }
+}                    
+                                 </span>
+                                 </pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed"
+                                aria-expanded="false">Referensi Dokter</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/ref/dokter</h3>
+                            <p>Fungsi : Melihat referensi dokter yang ada pada Aplikasi HFIS </p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                            <div id="collapse2">
+                                <pre>                                <span class="cp">
+{
+    "metadata": {
+        "code": 1,
+        "message": "OK"
+    },
+    "response": {
+        "list": [
+            {
+                "namadokter": "drg. Kusumawati Sukadi, Sp.BM",
+                "kodedokter": 700
+            },
+            {
+                "namadokter": "Dr. Dr. Noer Rachma, Sp.KFR",
+                "kodedokter": 854
+            }
+        ]
+    }
+}                   
+                                 </span>
+                                 </pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed"
+                                aria-expanded="false">Referensi Jadwal Dokter</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service
+                                    Name}</i>/jadwaldokter/kodepoli/{Parameter1}/tanggal/{Parameter2}</h3>
+                            <p>Fungsi : Melihat referensi jadwal dokter yang ada pada Aplikasi HFIS </p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Parameter1 : <b>{diisi kode poli BPJS}=&gt; ANA</b></p>
+                            <p>Parameter2 : <b>{diisi tanggal}=&gt; 2021-08-07</b></p>
+                            <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                            <div id="collapse3">
+                                <pre>                                <span class="cp">
+{
+    "response": {
+        "list": [{
+                "kodesubspesialis": "ANA",
+                "hari": 4,
+                "kapasitaspasien": 54,
+                "libur": 0,
+                "namahari": "KAMIS",
+                "jadwal": "08:00 - 12:00",
+                "namasubspesialis": "ANAK",
+                "namadokter": "DR. OKTORA WAHYU WIJAYANTO, SP.A",
+                "kodepoli": "ANA",
+                "namapoli": "Anak",
+                "kodedokter": 33690
+            }, {
+                "kodesubspesialis": "ANA",
+                "hari": 4,
+                "kapasitaspasien": 20,
+                "libur": 0,
+                "namahari": "KAMIS",
+                "jadwal": "13:00 - 17:00",
+                "namasubspesialis": "ANAK",
+                "namadokter": "DR. OKTORA WAHYU WIJAYANTO, SP.A",
+                "kodepoli": "ANA",
+                "namapoli": "Anak",
+                "kodedokter": 33690
+            }
+        ]
+    },
+    "metadata": {
+        "message": "Ok",
+        "code": 200
+    }
+}                   
+                                 </span>
+                                 </pre>
+                            </div>
+                            <div>
+                                <p><b>Catatan:</b></p>
+                                <p>
+                                    hari = 1 (senin), 2 (selasa), 3 (rabu), 4 (kamis), 5 (jumat), 6 (sabtu), 7 (minggu),
+                                    8 (hari libur nasional).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#RefPoliFP" class="collapsed"
+                                aria-expanded="false">Referensi Poli Finger Print <span class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="RefPoliFP" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/ref/poli/fp</h3>
+                            <p>Fungsi : Melihat referensi poli finger print</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                            <div id="collapse3">
+                                <pre>                                <span class="cp">
+{
+    "response": {
+        "list": [{
+            "kodesubspesialis": "027",
+            "namasubspesialis": "Anak Alergi Imunologi",
+            "kodepoli": "ANA",
+            "namapoli": "ANAK"
+            }
+        ]
+    },
+    "metadata": {
+        "message": "Ok",
+        "code": 1
+    }
+}                   
+                                 </span>
+                                 </pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#RefPasienFP" class="collapsed"
+                                aria-expanded="false">Referensi Pasien Finger Print <span class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="RefPasienFP" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service
+                                    Name}</i>/ref/pasien/fp/identitas/{nik/noka}/noidentitas/{noidentitas}</h3>
+                            <p>Fungsi : Melihat referensi pasien finger print</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                            <div id="collapse3">
+                                <pre>                                <span class="cp">
+{
+    "response": {
+        "nomorkartu": "0000000000031",
+        "nik": "6748373747440003",
+        "tgllahir": "2000-04-02",
+        "daftarfp": 1
+    },
+    "metadata": {
+        "message": "Ok",
+        "code": 1
+    }
+}                   
+                                 </span>
+                                 </pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- START POST 1-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#UpdateJadwalDokter"
+                                class="collapsed" aria-expanded="false">Update Jadwal Dokter</a>
+                        </h4>
+                    </div>
+                    <div id="UpdateJadwalDokter" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/jadwaldokter/updatejadwaldokter</h3>
+                            <p>Fungsi : Update jadwal dokter yang ada pada Aplikasi HFIS</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update">
+                                    <h4>Request</h4>
+                                    <div class="col-sm-6">
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodepoli": "ANA",
+   "kodesubspesialis": "ANA",
+   "kodedokter": 12346,
+   "jadwal": [
+      {
+         "hari": "1",
+         "buka": "08:00",
+         "tutup": "10:00"
+      },
+      {
+         "hari": "2",
+         "buka": "15:00",
+         "tutup": "17:00"
+      }
+   ]
+}
+                                     </span>
+                                     </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- notes code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodepoli": "{kode poli BPJS}",
+   "kodesubspesialis": "{kode subspesialis BPJS}",
+   "kodedokter": {kode dokter BPJS},
+   "jadwal": [
+      {
+         "hari": "{1 (senin), 2 (selasa), 3 (rabu), 4 (kamis), 5 (jumat), 6 (sabtu), 7 (minggu), 8 (hari libur nasional)}",
+         "buka": "{waktu}",
+         "tutup": "{waktu}"
+      },
+      {
+         "hari": "{1 (senin), 2 (selasa), 3 (rabu), 4 (kamis), 5 (jumat), 6 (sabtu), 7 (minggu), 8 (hari libur nasional)}",
+         "buka": "{waktu}",
+         "tutup": "{waktu}"
+      }
+   ]
+}                        
+                                     </span>
+                                     </pre>
+                                        </div>
+                                        <!-- notes end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update">
+                                    <h4>Response</h4>
+                                    <div id="json-res-update">
+                                        <pre>                                            <span class="cpaju">
+{
+   "metadata": {
+      "message": "Ok",
+      "code": 200
+   }
+}
+                                     </span>
+                                     </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                            <div>
+                                <p><b>Catatan:</b></p>
+                                <p>
+                                    - Data yang berhasil disimpan menunggu aproval dari BPJS atau otomatis approve
+                                    jadwal dokter oleh sistem, misal pengajuan perubahan jadwal oleh RS diantara jam
+                                    00.00 - 20.00 , kemudian alokasi approve manual oleh BPJS/cabang di jam 20.01-00.00.
+                                    Jika pukul 00.00 belum dilakukan aproval oleh kantor cabang, maka otomatis approve
+                                    by sistem akan dilaksanakan setelah jam 00.00 dan yang berubahnya esoknya (H+1).
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end pengajuan-->
+
+                <!-- END POST -->
+
+
+                <!-- START POST 2-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#TambahAntrean" class="collapsed"
+                                aria-expanded="false">Tambah Antrean</a>
+                        </h4>
+                    </div>
+                    <div id="TambahAntrean" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/add</h3>
+                            <p>Fungsi : Menambah Antrean RS</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update1" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update1" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update1">
+                                    <h4>Request</h4>
+                                    <div class="col-sm-6">
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "16032021A001",
+   "jenispasien": "JKN",
+   "nomorkartu": "00012345678",
+   "nik": "3212345678987654",
+   "nohp": "085635228888",
+   "kodepoli": "ANA",
+   "namapoli": "Anak",
+   "pasienbaru": 0,
+   "norm": "123345",
+   "tanggalperiksa": "2021-01-28",
+   "kodedokter": 12345,
+   "namadokter": "Dr. Hendra",
+   "jampraktek": "08:00-16:00",
+   "jeniskunjungan": 1,
+   "nomorreferensi": "0001R0040116A000001",
+   "nomorantrean": "A-12",
+   "angkaantrean": 12,
+   "estimasidilayani": 1615869169000,
+   "sisakuotajkn": 5,
+   "kuotajkn": 30,
+   "sisakuotanonjkn": 5,
+   "kuotanonjkn": 30,
+   "keterangan": "Peserta harap 30 menit lebih awal guna pencatatan administrasi."
+}
+                                     </span>
+                                     </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- notes code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "{kodebooking yang dibuat unik}",
+   "jenispasien": "{JKN / NON JKN}",
+   "nomorkartu": "{noka pasien BPJS,diisi kosong jika NON JKN}",
+   "nik": "{nik pasien}",
+   "nohp": "{no hp pasien}",
+   "kodepoli": "{memakai kode subspesialis BPJS}",
+   "namapoli": "{nama poli}",
+   "pasienbaru": {1(Ya),0(Tidak)},
+   "norm": "{no rekam medis pasien}",
+   "tanggalperiksa": "{tanggal periksa}",
+   "kodedokter": {kode dokter BPJS},
+   "namadokter": "{nama dokter}",
+   "jampraktek": "{jam praktek dokter}",
+   "jeniskunjungan": {1 (Rujukan FKTP), 2 (Rujukan Internal), 3 (Kontrol), 4 (Rujukan Antar RS)},
+   "nomorreferensi": "{norujukan/kontrol pasien JKN,diisi kosong jika NON JKN}",
+   "nomorantrean": "{nomor antrean pasien}",
+   "angkaantrean": {angka antrean},
+   "estimasidilayani": {waktu estimasi dilayani dalam miliseconds},
+   "sisakuotajkn": {sisa kuota JKN},
+   "kuotajkn": {kuota JKN},
+   "sisakuotanonjkn": {sisa kuota non JKN},
+   "kuotanonjkn": {kuota non JKN},
+   "keterangan": "{informasi untuk pasien}"
+}                        
+                                     </span>
+                                     </pre>
+                                        </div>
+                                        <!-- notes end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update1">
+                                    <h4>Response</h4>
+                                    <div id="json-res-update">
+                                        <pre>                                            <span class="cpaju">
+{
+   "metadata": {
+      "message": "Ok",
+      "code": 200
+   }
+}
+                                     </span>
+                                     </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end pengajuan-->
+
+                <!-- END POST -->
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#TambahAntreanFarmasi"
+                                class="collapsed" aria-expanded="false">Tambah Antrean Farmasi <span
+                                    class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="TambahAntreanFarmasi" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/farmasi/add</h3>
+                            <p>Fungsi : Menambah Antrean Farmasi RS</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update50" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update50" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update50">
+                                    <h4>Request</h4>
+                                    <div>
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                            <span class="cpaju">
+{
+    "kodebooking": "16032021A001",
+    "jenisresep": "racikan" ---&gt; (racikan / non racikan),
+    "nomorantrean": 1,
+    "keterangan": ""
+}
+                 </span>
+                 </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update50">
+                                    <h4>Response</h4>
+                                    <div id="json-res-update">
+                                        <pre>                        <span class="cpaju">
+{
+    "metadata": {
+        "message": "Ok",
+        "code": 200
+    }
+}
+                 </span>
+                 </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- START POST 3-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#UpdateWaktuAntrean"
+                                class="collapsed" aria-expanded="false">Update Waktu Antrean <span
+                                    class="badge">Update</span></a>
+                        </h4>
+                    </div>
+                    <div id="UpdateWaktuAntrean" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/updatewaktu</h3>
+                            <p>Fungsi : Mengirimkan waktu tunggu/waktu layan</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update2" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update2" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update2">
+                                    <h4>Request</h4>
+                                    <div class="col-sm-6">
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "16032021A001",
+   "taskid": 1,
+   "waktu": 1616559330000,
+   "jenisresep": "Tidak ada/Racikan/Non racikan" ---&gt; khusus yang sudah implementasi antrean farmasi
+}
+                                     </span>
+                                     </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- notes code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "{kodebooking yang didapat dari servis tambah antrean}",
+   "taskid": {
+                1 (mulai waktu tunggu admisi), 
+                2 (akhir waktu tunggu admisi/mulai waktu layan admisi), 
+                3 (akhir waktu layan admisi/mulai waktu tunggu poli), 
+                4 (akhir waktu tunggu poli/mulai waktu layan poli),  
+                5 (akhir waktu layan poli/mulai waktu tunggu farmasi), 
+                6 (akhir waktu tunggu farmasi/mulai waktu layan farmasi membuat obat), 
+                7 (akhir waktu obat selesai dibuat),
+                99 (tidak hadir/batal)
+            },
+   "waktu": {waktu dalam timestamp milisecond}
+}                        
+                                     </span>
+                                     </pre>
+                                        </div>
+                                        <!-- notes end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update2">
+                                    <h4>Response</h4>
+                                    <div id="json-res-update">
+                                        <pre>                                            <span class="cpaju">
+{
+   "metadata": {
+      "message": "Ok",
+      "code": 200
+   }
+}
+                                     </span>
+                                     </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                            <div>
+                                <p><b>Catatan:</b></p>
+                                <p>
+                                    - Alur Task Id Pasien Baru: 1-2-3-4-5 (apabila ada obat tambah 6-7) <br>
+                                    - Alur Task Id Pasien Lama: 3-4-5 (apabila ada obat tambah 6-7) <br>
+                                    - Sisa antrean berkurang pada task 5 <br>
+                                    - Pemanggilan antrean poli pasien muncul pada task 4 <br>
+                                    - Cek in/mulai waktu tunggu untuk pasien baru mulai pada task 1 <br>
+                                    - Cek in/mulai waktu tunggu untuk pasien lama mulai pada task 3 <br>
+                                    <b>- Agar terdapat validasi pada sistem RS agar alur pengiriman Task Id berurutan
+                                        dari awal, dan waktu Task Id yang kecil lebih dulu daripada Task Id yang besar
+                                        (misal task Id 1=08.00, task Id 2= 08.05) </b><br>
+                                    - jenisresep : Tidak ada/Racikan/Non racikan (jenisresep khusus untuk rs yang sudah
+                                    implementasi antrean farmasi. Jika belum/tidak kolom jenisresep dapat dihilangkan)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end pengajuan-->
+
+                <!-- END POST -->
+
+
+                <!-- START POST 4-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#BatalAntrean" class="collapsed"
+                                aria-expanded="false">Batal Antrean</a>
+                        </h4>
+                    </div>
+                    <div id="BatalAntrean" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/batal</h3>
+                            <p>Fungsi : Membatalkan antrean pasien</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update3" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update3" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update3">
+                                    <h4>Request</h4>
+                                    <div class="col-sm-6">
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "16032021A001",
+   "keterangan": "Terjadi perubahan jadwal dokter, silahkan daftar kembali"
+}
+                                     </span>
+                                     </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- notes code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "{kodebooking yang didapat dari servis tambah antrean}",
+   "keterangan": "{alasan pembatalan}"
+}                        
+                                     </span>
+                                     </pre>
+                                        </div>
+                                        <!-- notes end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update3">
+                                    <h4>Response</h4>
+                                    <div id="json-res-update">
+                                        <pre>                                            <span class="cpaju">
+{
+   "metadata": {
+      "message": "Ok",
+      "code": 200
+   }
+}
+                                     </span>
+                                     </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+                <!-- end pengajuan-->
+
+                <!-- END POST -->
+
+                <!-- START POST 5-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#ListWaktuTaskId" class="collapsed"
+                                aria-expanded="false">List Waktu Task Id</a>
+                        </h4>
+                    </div>
+                    <div id="ListWaktuTaskId" class="panel-collapse collapse" aria-expanded="false"
+                        style="height: 0px;">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/getlisttask</h3>
+                            <p>Fungsi : Melihat waktu task id yang telah dikirim ke BPJS</p>
+                            <p>Method : <b>POST</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#req-update4" data-toggle="tab">Request</a>
+                                </li>
+                                <li>
+                                    <a href="#resp-update4" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="req-update4">
+                                    <h4>Request</h4>
+                                    <div class="col-sm-6">
+                                        <!-- code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "Y03-20#1617068533"
+}
+                                     </span>
+                                     </pre>
+                                        </div>
+
+                                        <!-- end code real-->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- notes code real-->
+                                        <div id="json-req-update">
+                                            <pre>                                                <span class="cpaju">
+{
+   "kodebooking": "{kodebooking yang didapat dari servis tambah antrean}",
+}                        
+                                     </span>
+                                     </pre>
+                                        </div>
+                                        <!-- notes end code real-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="resp-update4">
+                                    <h4>Response</h4>
+                                    <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                                    <div id="json-res-update">
+                                        <pre>                                            <span class="cpaju">
+{
+   "response": {
+      "list": [
+         {
+            "wakturs": "16-03-2021 11:32:49 WIB",
+            "waktu": "24-03-2021 12:55:23 WIB",
+            "taskname": "mulai waktu tunggu admisi",
+            "taskid": 1,
+            "kodebooking": "Y03-20#1617068533"
+         }
+      ]
+   },
+   "metadata": {
+      "code": 200,
+      "message": "OK"
+   }
+}
+                                     </span>
+                                     </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+                <!-- end pengajuan-->
+
+                <!-- END POST -->
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#dasboardPerTanggal"
+                                class="collapsed" aria-expanded="false">Dashboard Per Tanggal</a>
+                        </h4>
+                    </div>
+                    <div id="dasboardPerTanggal" class="panel-collapse collapse" aria-expanded="false"
+                        style="height: 0px;">
+                        <div class="panel-body">
+                            <h3><i>{Base URL}</i>/<i>{Service
+                                    Name}</i>/dashboard/waktutunggu/tanggal/<b>{Parameter1}</b>/waktu/<b>{Parameter2}</b>
+                            </h3>
+                            <p>Fungsi : Dashboard waktu per tanggal </p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Parameter1 : <b>{diisi tanggal}=&gt; 2021-04-16</b></p>
+                            <p>Parameter2 : <b>{diisi waktu}=&gt; rs atau server</b></p>
+                            <div id="DashboardPerTanggal">
+                                <pre>                                <span class="cp">
+{
+   "metadata": {
+      "code": 200,
+      "message": "OK"
+   },
+   "response": {
+      "list": [
+         {
+            "kdppk": "1311R002",
+            "waktu_task1": 0,
+            "avg_waktu_task4": 0,
+            "jumlah_antrean": 1,
+            "avg_waktu_task3": 0,
+            "namapoli": "BEDAH",
+            "avg_waktu_task6": 0,
+            "avg_waktu_task5": 0,
+            "nmppk": "RSU AISYIYAH",
+            "avg_waktu_task2": 0,
+            "avg_waktu_task1": 0,
+            "kodepoli": "BED",
+            "waktu_task5": 0,
+            "waktu_task4": 0,
+            "waktu_task3": 0,
+            "insertdate": 1627873951000,
+            "tanggal": "2021-04-16",
+            "waktu_task2": 0,
+            "waktu_task6": 0
+         }
+      ]
+   }
+}                    
+                                 </span>
+                                 </pre>
+                            </div>
+                            <div>
+                                <p><b>Catatan:</b></p>
+                                <p>
+
+                                    a) Waktu Task 1 = Waktu tunggu admisi dalam detik <br>
+                                    b) Waktu Task 2 = Waktu layan admisi dalam detik <br>
+                                    c) Waktu Task 3 = Waktu tunggu poli dalam detik <br>
+                                    d) Waktu Task 4 = Waktu layan poli dalam detik <br>
+                                    e) Waktu Task 5 = Waktu tunggu farmasi dalam detik <br>
+                                    f) Waktu Task 6 = Waktu layan farmasi dalam detik <br>
+                                    g) Insertdate = Waktu pengambilan data, timestamp dalam milisecond <br>
+                                    h) Waktu server adalah data waktu (task 1-6) yang dicatat oleh server BPJS Kesehatan
+                                    setelah RS mengimkan data, sedangkan waktu rs adalah data waktu (task 1-6) yang
+                                    dikirimkan oleh RS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#dasboardPerBulan"
+                                class="collapsed" aria-expanded="false">Dashboard Per Bulan</a>
+                        </h4>
+                    </div>
+                    <div id="dasboardPerBulan" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{Base URL}</i>/<i>{Service
+                                    Name}</i>/dashboard/waktutunggu/bulan/<b>{Parameter1}</b>/tahun/<b>{Parameter2}</b>/waktu/<b>{Parameter3}</b>
+                            </h3>
+                            <p>Fungsi : Dashboard waktu per bulan </p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <p>Parameter1 : <b>{diisi bulan}=&gt; 07</b></p>
+                            <p>Parameter2 : <b>{diisi tahun}=&gt; 2021</b></p>
+                            <p>Parameter3 : <b>{diisi waktu}=&gt; rs atau server</b></p>
+                            <div id="DashboardPerBulan">
+                                <pre>                                <span class="cp">
+{
+   "metadata": {
+      "code": 200,
+      "message": "OK"
+   },
+   "response": {
+      "list": [
+         {
+            "kdppk": "1311R002",
+            "waktu_task1": 0,
+            "avg_waktu_task4": 0,
+            "jumlah_antrean": 1,
+            "avg_waktu_task3": 0,
+            "namapoli": "BEDAH",
+            "avg_waktu_task6": 0,
+            "avg_waktu_task5": 0,
+            "nmppk": "RSU AISYIYAH",
+            "avg_waktu_task2": 0,
+            "avg_waktu_task1": 0,
+            "kodepoli": "BED",
+            "waktu_task5": 0,
+            "waktu_task4": 0,
+            "waktu_task3": 0,
+            "insertdate": 1627873951000,
+            "tanggal": "2021-04-16",
+            "waktu_task2": 0,
+            "waktu_task6": 0
+         }
+      ]
+   }
+}                    
+                                 </span>
+                                 </pre>
+                            </div>
+                            <div>
+                                <p><b>Catatan:</b></p>
+                                <p>
+
+                                    a) Waktu Task 1 = Waktu tunggu admisi dalam detik <br>
+                                    b) Waktu Task 2 = Waktu layan admisi dalam detik <br>
+                                    c) Waktu Task 3 = Waktu tunggu poli dalam detik <br>
+                                    d) Waktu Task 4 = Waktu layan poli dalam detik <br>
+                                    e) Waktu Task 5 = Waktu tunggu farmasi dalam detik <br>
+                                    f) Waktu Task 6 = Waktu layan farmasi dalam detik <br>
+                                    g) Insertdate = Waktu pengambilan data, timestamp dalam milisecond <br>
+                                    h) Waktu server adalah data waktu (task 1-6) yang dicatat oleh server BPJS Kesehatan
+                                    setelah RS mengimkan data, sedangkan waktu rs adalah data waktu (task 1-6) yang
+                                    dikirimkan oleh RS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#AntreanPerTanggal"
+                                class="collapsed" aria-expanded="false">Antrean Per Tanggal <span
+                                    class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="AntreanPerTanggal" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/pendaftaran/tanggal/{tanggal}</h3>
+                            <p>Fungsi : Melihat pendaftaran antrean per tanggal</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#resp-update4" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="resp-update4">
+                                    <h4>Response</h4>
+                                    <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                                    <div id="json-res-update">
+                                        <pre>                                        <span class="cpaju">
+{
+    "response": {
+        "list": [
+            {
+                "kodebooking": "ABC0000001",
+                "tanggal": "2021-03-24",
+                "kodepoli": "INT",
+                "kodedokter": 1234,
+                "jampraktek": "08:00-17:00",
+                "nik": "2749494383830001",
+                "nokapst": "0000000000013",
+                "nohp": "081234567890",
+                "norekammedis": "654321",
+                "jeniskunjungan": 1,
+                "nomorreferensi": "1029R0021221K000012",
+                "sumberdata": "Mobile JKN",
+                "ispeserta": 1,
+                "noantrean": "INT-0001",
+                "estimasidilayani": 1669278161000,
+                "createdtime": 1669278161000,
+                "status": "Selesai dilayani"
+            }
+        ]
+    },
+    "metadata": {
+        "code": 200,
+        "message": "OK"
+    }
+}
+                                 </span>
+                                 </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#AntreanPerKodeBooking"
+                                class="collapsed" aria-expanded="false">Antrean Per Kode Booking <span
+                                    class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="AntreanPerKodeBooking" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/pendaftaran/kodebooking/{kodebooking}
+                            </h3>
+                            <p>Fungsi : Melihat pendaftaran antrean per kode booking</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#resp-update4" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="resp-update4">
+                                    <h4>Response</h4>
+                                    <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                                    <div id="json-res-update">
+                                        <pre>                                        <span class="cpaju">
+{
+    "response": {
+        "list": [
+            {
+                "kodebooking": "ABC0000001",
+                "tanggal": "2021-03-24",
+                "kodepoli": "INT",
+                "kodedokter": 1234,
+                "jampraktek": "08:00-17:00",
+                "nik": "2749494383830001",
+                "nokapst": "0000000000013",
+                "nohp": "081234567890",
+                "norekammedis": "654321",
+                "jeniskunjungan": 1,
+                "nomorreferensi": "1029R0021221K000012",
+                "sumberdata": "Mobile JKN",
+                "ispeserta": 1,
+                "noantrean": "INT-0001",
+                "estimasidilayani": 1669278161000,
+                "createdtime": 1669278161000,
+                "status": "Selesai dilayani"
+            }
+        ]
+    },
+    "metadata": {
+        "code": 200,
+        "message": "OK"
+    }
+}
+                                 </span>
+                                 </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#AntreanBelumDilayani"
+                                class="collapsed" aria-expanded="false">Antrean Belum Dilayani <span
+                                    class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="AntreanBelumDilayani" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service Name}</i>/antrean/pendaftaran/aktif</h3>
+                            <p>Fungsi : Melihat pendaftaran antrean belum dilayani</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#resp-update4" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="resp-update4">
+                                    <h4>Response</h4>
+                                    <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                                    <div id="json-res-update">
+                                        <pre>                                        <span class="cpaju">
+{
+    "response": {
+        "list": [
+            {
+                "kodebooking": "ABC0000001",
+                "tanggal": "2021-03-24",
+                "kodepoli": "INT",
+                "kodedokter": 1234,
+                "jampraktek": "08:00-17:00",
+                "nik": "2749494383830001",
+                "nokapst": "0000000000013",
+                "nohp": "081234567890",
+                "norekammedis": "654321",
+                "jeniskunjungan": 1,
+                "nomorreferensi": "1029R0021221K000012",
+                "sumberdata": "Mobile JKN",
+                "ispeserta": 1,
+                "noantrean": "INT-0001",
+                "estimasidilayani": 1669278161000,
+                "createdtime": 1669278161000,
+                "status": "Selesai dilayani"
+            }
+        ]
+    },
+    "metadata": {
+        "code": 200,
+        "message": "OK"
+    }
+}
+                                 </span>
+                                 </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#AntreanBelumDilayani2"
+                                class="collapsed" aria-expanded="false">Antrean Belum Dilayani Per Poli Per Dokter Per
+                                Hari Per Jam Praktek <span class="badge">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="AntreanBelumDilayani2" class="panel-collapse collapse" aria-expanded="false">
+                        <div class="panel-body">
+                            <h3><i>{BASE URL}</i>/<i>{Service
+                                    Name}</i>/antrean/pendaftaran/kodepoli/{kodepoli}/kodedokter/{kodedokter}/hari/{hari}/jampraktek/{jampraktek}
+                            </h3>
+                            <p>Fungsi : Melihat pendaftaran antrean belum dilayani per poli per dokter per hari per jam
+                                praktek</p>
+                            <p>Method : <b>GET</b></p>
+                            <p>Format : <b>Json</b></p>
+                            <p>Header : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-cons-id: {cons id akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-timestamp: {timestamp
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>x-signature: {signature
+                                    akses}</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>user_key: {userkey akses}</b><br>
+                            </p>
+                            <!--- -->
+                            <!-- nav-pills-->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#resp-update4" data-toggle="tab">Response</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="resp-update4">
+                                    <h4>Response</h4>
+                                    <p>Respon : <b>Perlu dilakukan dekripsi disisi client</b></p>
+                                    <div id="json-res-update">
+                                        <pre>                                        <span class="cpaju">
+{
+    "response": {
+        "list": [
+            {
+                "kodebooking": "ABC0000001",
+                "tanggal": "2021-03-24",
+                "kodepoli": "INT",
+                "kodedokter": 1234,
+                "jampraktek": "08:00-17:00",
+                "nik": "2749494383830001",
+                "nokapst": "0000000000013",
+                "nohp": "081234567890",
+                "norekammedis": "654321",
+                "jeniskunjungan": 1,
+                "nomorreferensi": "1029R0021221K000012",
+                "sumberdata": "Mobile JKN",
+                "ispeserta": 1,
+                "noantrean": "INT-0001",
+                "estimasidilayani": 1669278161000,
+                "createdtime": 1669278161000,
+                "status": "Selesai dilayani"
+            }
+        ]
+    },
+    "metadata": {
+        "code": 200,
+        "message": "OK"
+    }
+}
+                                 </span>
+                                 </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--- nav-pills-->
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+</body>
+<script src="https://dvlp.bpjs-kesehatan.go.id:8888/trust-mark/libs/jquery/jquery/dist/jquery-3.6.0.min.js"></script>
+<script src="https://dvlp.bpjs-kesehatan.go.id:8888/trust-mark/libs/jquery/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</html>
