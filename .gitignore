@@ -1,149 +1,85 @@
-# =====================================================
-# OPERATING SYSTEM FILES
-# =====================================================
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# Linux
-*~
-.directory
-.Trash-*
-
-# =====================================================
-# ENVIRONMENT / SECRET FILES
-# =====================================================
-
+#####################################
+# ENVIRONMENT
+#####################################
 .env
-.env.*
 env
 
-# Vagrant
-.vagrant
-Vagrantfile
+#####################################
+# COMPOSER
+#####################################
+/vendor/
 
-# =====================================================
-# CODEIGNITER RUNTIME FILES
-# =====================================================
+#####################################
+# NODE (jika nanti ada build asset)
+/node_modules/
+/npm-debug.log
+/yarn-error.log
 
-writable/cache/*
-!writable/cache/index.html
+#####################################
+# RUNTIME - CODEIGNITER
+#####################################
+/writable/cache/*
+!/writable/cache/index.html
 
-writable/logs/*
-!writable/logs/index.html
+/writable/debugbar/*
+!/writable/debugbar/index.html
 
-writable/session/*
-!writable/session/index.html
+/writable/logs/*
+!/writable/logs/index.html
 
-writable/uploads/*
-!writable/uploads/index.html
+/writable/session/*
+!/writable/session/index.html
 
-writable/debugbar/*
-!writable/debugbar/index.html
+/writable/uploads/*
+!/writable/uploads/index.html
 
-php_errors.log
+#####################################
+# IDE / EDITOR
+#####################################
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# =====================================================
-# DEPENDENCIES
-# =====================================================
+#####################################
+# OS FILES
+#####################################
+.DS_Store
+Thumbs.db
+desktop.ini
 
-vendor/
-node_modules/
-
-# =====================================================
-# BUILD / RELEASE FILES
-# =====================================================
-
-build/
-builds/
-dist/
-release/
-
-# =====================================================
-# DEBUG / TEMP FILES
-# =====================================================
-
+#####################################
+# LOCAL DEBUG FILES
+#####################################
 debug_output.txt
 *.log
-*.cache
-*.tmp
+
+#####################################
+# BUILD / TEMP
+#####################################
+build/
+builds/
+tmp/
+temp/
+
+#####################################
+# TEST OUTPUT
+#####################################
+phpunit.result.cache
+
+#####################################
+# BACKUP FILE
+#####################################
 *.bak
-
-# =====================================================
-# TEST FILES
-# =====================================================
-
-tests/coverage*
-phpunit
-phpunit*.xml
-
-# =====================================================
-# USER GUIDE BUILD FILES
-# =====================================================
-
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
-
-# =====================================================
-# IDE / EDITOR FILES
-# =====================================================
-
-# Sublime
-*.sublime-workspace
-*.sublime-project
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-
-# PHPStorm / JetBrains
-.idea/
-*.iml
-
-# VS Code
-.vscode/
-
-# NetBeans
-/nbproject/
-/nbbuild/
-/dist/
-/nbdist/
-/nbactions.xml
-/nb-configuration.xml
-/.nb-gradle/
-
-# PHP Intel
-.phpintel
-/api/
-
-# =====================================================
-# CUSTOM MODULE TESTING
-# =====================================================
-
-_modules/
-
-# =====================================================
-# DATABASE / BACKUP FILES
-# =====================================================
-
 *.sql
-*.sqlite
-*.db
-*.backup
+*.dump
+*.old
+*.zip
+update_db.php
 
-# =====================================================
-# OPTIONAL: LOCAL DEV SCRIPTS
-# =====================================================
-
-check_logs.php
-update_db_simple.php
+#####################################
+# SECURITY (optional)
+#####################################
+*.key
+*.pem
+*.crt

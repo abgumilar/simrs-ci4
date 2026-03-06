@@ -169,7 +169,18 @@ class RawatJalan extends BaseController
         $diagList = is_string($diagRaw) ? json_decode($diagRaw, true) : $diagRaw;
 
         // Ambil diagnosa primer untuk field shortcut
-        $primer = collect($diagList ?? [])->firstWhere('jenis', 'primer') ?? ($diagList[0] ?? null);
+        $primer = null;
+
+        foreach ($diagList as $d) {
+            if (($d['jenis'] ?? '') === 'primer') {
+                $primer = $d;
+                break;
+            }
+        }
+
+        if (!$primer && !empty($diagList)) {
+            $primer = $diagList[0];
+        }
 
         $updateData = [
             // S
